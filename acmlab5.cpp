@@ -86,11 +86,11 @@ int main()
 	std::list<DATA_TYPE> output = sequential_quick_sort(input);
 
 	std::cout << "input:" << std::endl;
-	std::copy(input.begin(), input.end(), std::ostream_iterator<unsigned long long int>(std::cout, ", "));
+	std::copy(input.begin(), input.end(), std::ostream_iterator<DATA_TYPE>(std::cout, ", "));
 	std::cout << std::endl << std::endl;
 
 	std::cout << "output:" << std::endl;
-	std::copy(output.begin(), output.end(), std::ostream_iterator<unsigned long long int>(std::cout, ", "));
+	std::copy(output.begin(), output.end(), std::ostream_iterator<DATA_TYPE>(std::cout, ", "));
 	std::cout << std::endl << std::endl;
 
 	std::cout << "Press Enter to continue . . .";
