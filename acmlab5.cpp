@@ -18,8 +18,8 @@
 #include <vector>
 #include <algorithm>
 
+#define DATA_TYPE unsigned long long int
 #define INPUT_DATA { 5, 7, 3, 4, 1, 9, 2, 8, 10, 6 }
-
 
 template<typename F, typename A>
 std::future<typename std::result_of<F(A&&)>::type>
@@ -82,8 +82,8 @@ std::list < T > parallel_quick_sort(std::list<T> input){
 
 int main()
 {
-	std::list<unsigned long long int> input(INPUT_DATA);
-	std::list <unsigned long long int> output = sequential_quick_sort(input);
+	std::list<DATA_TYPE> input(INPUT_DATA);
+	std::list<DATA_TYPE> output = sequential_quick_sort(input);
 
 	std::cout << "input:" << std::endl;
 	std::copy(input.begin(), input.end(), std::ostream_iterator<unsigned long long int>(std::cout, ", "));
@@ -93,7 +93,7 @@ int main()
 	std::copy(output.begin(), output.end(), std::ostream_iterator<unsigned long long int>(std::cout, ", "));
 	std::cout << std::endl << std::endl;
 
-	std::cout << "Press any key to continue . . .";
+	std::cout << "Press Enter to continue . . .";
 	std::cin.get();
 
 	return 0;
